@@ -1,11 +1,11 @@
-package linkedList;
+package JAVA.linkedList;
 
 public class LinkedList_imp {
     Node head;
     public void insert(int data){
         Node node = new Node();
         node.data= data;
-        node.next=null;
+        //node.next=null;
 
         if(head==null){
             head=node;
@@ -17,6 +17,13 @@ public class LinkedList_imp {
             }
             new_node.next=node;
         }
+    }
+
+    public void insertAtstart(int data){
+        Node node= new Node();
+        node.data=data;
+        node.next=head;
+        head=node;
     }
     
     public void show(){
