@@ -20,6 +20,13 @@ public class llmain {
 
         System.out.println();
         ll.show(); //Printing the list formed.
+
+        System.out.println("\nEnter postion where element is to be entered and the element respectively.");
+        ll.insert(sc.nextInt(),sc.nextInt());
+
+        System.out.println();
+        ll.show(); //Printing the list formed.
+
         sc.close();
     }
     

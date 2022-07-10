@@ -25,6 +25,27 @@ public class LinkedList_imp {
         node.next=head;
         head=node;
     }
+
+    public void insert(int pos, int data){
+        Node node = new Node();
+        node.data=data;
+
+        if(pos==0){
+            node.next=head;
+            head=node;
+        }
+        else{
+            Node new_node=head;
+            int c=pos-1;
+            while(c!=0){
+                new_node=new_node.next;
+                c--;
+            }
+            node.next=new_node.next;
+            new_node.next=node;
+            
+        }
+    }
     
     public void show(){
         Node nn=head;
