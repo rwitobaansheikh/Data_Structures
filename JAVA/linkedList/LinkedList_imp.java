@@ -27,13 +27,13 @@ public class LinkedList_imp {
     }
 
     public void insert(int pos, int data){
-        Node node = new Node();
-        node.data=data;
 
         if(pos==0){
             insertAtstart(data);
         }
         else{
+            Node node = new Node();
+            node.data=data;
             Node new_node=head;
             int c=pos-1;
             while(c!=0){

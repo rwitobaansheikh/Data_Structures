@@ -19,6 +19,20 @@ class LinkedList_implementation:
                 new_node=new_node.next
             new_node.next=node
             
+    def insertAt(self,pos,data):
+        if(pos==0):
+            self.insertAtbeg(data)
+        else:
+            node=Node()
+            node.data=data
+            new_node=self.head
+            c=pos-1
+            while c>0:
+                new_node=new_node.next
+                c-=1
+            node.next=new_node.next
+            new_node.next=node
+            
     def insertAtbeg(self,data):
         node=Node()
         node.data=data
@@ -45,6 +59,10 @@ def main():
     ll.show()
     
     ll.insertAtbeg(int(input("Enter element to be inserted at beginning of list: ")))
+    
+    ll.show()
+    
+    ll.insertAt(int(input("Enter position where element is to be inserted.")),int(input("Enter element to be inserted.")))
     
     ll.show()
 
