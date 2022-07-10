@@ -31,8 +31,7 @@ public class LinkedList_imp {
         node.data=data;
 
         if(pos==0){
-            node.next=head;
-            head=node;
+            insertAtstart(data);
         }
         else{
             Node new_node=head;
