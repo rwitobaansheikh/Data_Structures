@@ -27,6 +27,12 @@ public class llmain {
         System.out.println();
         ll.show(); //Printing the list formed.
 
+        System.out.println("\nEnter Position where element is to be deleted.");
+        ll.delete(sc.nextInt());
+
+        System.out.println();
+        ll.show(); //Printing the list formed.
+
         sc.close();
     }
     

@@ -45,6 +45,26 @@ public class LinkedList_imp {
             
         }
     }
+
+    public void deleteAtStart(){
+        head=head.next;
+    }
+
+    public void delete(int pos){
+        if(pos==0)
+            deleteAtStart();
+        else{
+            Node node=head;
+            Node n=new Node();
+            while(pos-1!=0){
+                node=node.next;
+                pos--;
+            }
+            n=node.next;
+            node.next=n.next;
+            n=null;
+        }
+    }
     
     public void show(){
         Node nn=head;
