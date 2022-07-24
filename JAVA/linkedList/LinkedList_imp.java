@@ -50,6 +50,20 @@ public class LinkedList_imp {
         head=head.next;
     }
 
+    public void delete(){
+        if(head.next==null)
+            deleteAtStart();
+        else{
+            Node node=head;
+            int c=0;
+            while(node.next != null){
+                node=node.next;
+                c++;
+            }
+            delete(c);
+        }
+    }
+
     public void delete(int pos){
         if(pos==0)
             deleteAtStart();
@@ -68,10 +82,12 @@ public class LinkedList_imp {
     
     public void show(){
         Node nn=head;
+        System.out.println();
         while(nn.next!=null){
             System.out.print(nn.data+" ");
             nn=nn.next;
         }
         System.out.print(nn.data);
+        System.out.println();
     }
 }
